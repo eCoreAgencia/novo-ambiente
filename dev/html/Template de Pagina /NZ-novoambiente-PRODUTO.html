@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+	<head>
+	    <vtex:template id="NZ-novoambiente-includes-header" />
+	</head>
+
+	<body>
+
+		<!-- MENU NZ-novoambiente -->
+		<vtex:template id="NZ-novoambiente-menumobile" />
+
+		<div class="tpl-wrapper">
+			<!-- HEADER -->
+			<vtex:template id="NZ-novoambiente-header" />
+
+			<!-- MAIN -->
+			<main id="main">
+
+				<div class="tpl-content">
+
+					<div class="tpl-center">
+
+						<vtex.cmc:breadCrumb />
+
+						<section id="area-a">
+							<div class="left">
+								<vtex.cmc:ProductImage zoom="on"/>
+
+								<vtex:contentPlaceHolder id="FlagPersonalizado" />
+							</div>
+							<div class="right">
+								<div class="wrapper flags">
+									<vtex.cmc:HightLight/>
+									<vtex.cmc:discountHightLight/>
+								</div>
+								<div class="wrapper nome"><vtex.cmc:productName/></div>
+								<div class="wrapper marca"><vtex.cmc:brandName/></div>
+								<div class="wrapper descricaocurta"><vtex.cmc:productDescriptionShort /></div>
+								<div class="wrapper sku"><vtex.cmc:skuSelection /></div>
+								<div class="wrapper preco"><vtex.cmc:skuPrice /></div>
+								<div class="wrapper botao"><vtex.cmc:BuyButton /></div>
+								<div class="wrapper segura"><span>Compra segura</span></div>
+								<div class="wrapper compartilhar">
+									<ul>
+										<li class="compartilhar">Gostou? Compartilhe esse produto!</li>
+										<li class="facebook">
+											<a href="" target="_blank">
+												<i class="ico-facebook"></i>
+											</a>
+										</li>
+										<li class="twitter">
+											<a href="" target="_blank">
+												<i class="ico-twitter"></i>
+											</a>
+										</li>
+										<li class="gplus">
+											<a href="" target="_blank">
+												<i class="ico-gplus"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="wrapper frete">
+									<vtex:template id="fraseEntrega-Herman-Miller" />
+									<vtex.cmc:shippingValue/>
+								</div>
+							</div>
+						</section>
+
+						<section id="area-b">
+							<div id="moreInfo-produto">
+						        <div id="tabs">
+						            <ul>
+						                <li class="ativo">
+						                	<button>Visão geral</button>
+						                </li>
+						            </ul>
+
+						            <div id="tabs-1" class="tabs ativo">
+						                <vtex.cmc:ProductDescription />
+
+						                <div style="display:none;">
+							                <vtex.cmc:stockKeepingUnitMeasures/>
+							                <vtex.cmc:productSpecification/>
+						                </div>
+						            </div>
+								</div>
+						    </div>
+						</section>
+
+						<section id="qcctb">
+							<div class="quem-comprou-comprou-tambem">
+								<vtex:contentPlaceHolder id="Quem-comprou-comprou-tambem" />
+							</div>
+						</section><!-- FIM qvvtb -->
+
+					</div>
+
+				</div><!-- fim tpl-content -->
+
+			</main><!-- fim main -->
+
+			<!-- FOOTER -->
+			<vtex:template id="NZ-novoambiente-footer" />
+		</div><!-- fim tpl-wrapper -->
+
+		<!-- SCRIPTS -->
+		<vtex:template id="NZ-novoambiente-includes-scripts" />
+
+		<!-- MODAL ADICIONADO SUCESSO -->
+		<div id="adicionadoSucesso">
+			<div class="overflow"></div>
+			<div class="content">
+				<button class="close">X</button>
+
+				<div class="left"></div>
+
+				<div class="right">
+					<div class="nome"></div>
+					<div class="preco"></div>
+
+					<button class="bt bt-finalizar">Ir para à sacola</button>
+					<button class="bt bt-continuar">Continuar Comprando</button>
+				</div>
+			</div>
+		</div><!-- FIM MODAL ADICIONADO SUCESSO -->
+
+	</body>
+
+</html>
