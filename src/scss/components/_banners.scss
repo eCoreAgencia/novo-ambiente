@@ -1,0 +1,67 @@
+.banner {
+  &--full {
+    position: relative;
+    .slide-count-wrap {
+      position: absolute;
+      right: 40px;
+      bottom: 40px;
+      z-index: 10;
+      color: $c-white;
+      font-size: 29px;
+      .current, .total {
+        padding: 0 5px;
+      }
+      .current {
+        font-weight: 700;
+      }
+
+      .total {
+        opacity: 0.5;
+      }
+    }
+    .slick-dots {
+      left: 0;
+      width: 100%;
+      bottom: 10px;
+      position: absolute;
+      text-align: center;
+      display: flex !important;
+      justify-content: center;
+      
+      li {
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: middle;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.slick-active {
+          opacity: 1;
+          
+          button {
+            background-color: #DA291D;
+          }
+        }
+      }
+
+      button {
+        padding: 0;
+        width: 20px;
+        height: 20px;
+        border: none;
+        font-size: 0;
+        margin: 2px 0;
+        border-radius: 50%;
+        background-color: #000;
+      }
+    }
+  }
+
+  .box-banner {
+    & > a {
+      display: block;
+    }
+  }
+}

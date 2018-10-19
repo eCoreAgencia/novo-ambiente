@@ -1,0 +1,112 @@
+.footer {
+    padding: 0;
+
+    &__area {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    &__top {
+        overflow: hidden;
+        padding: 20px 20px 80px;
+        background-color: #252525;
+
+        &__box {
+            margin: 0;
+            width: 100%;
+            margin-bottom: 20px;
+
+            &__tlt { 
+                font-size: 16px;
+                color: #d4d4d4;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            &__list {
+                &--social {
+                    &__item {
+                        width: 35px;
+                        height: 24px;
+                        margin-right: 2px;
+                        line-height: 24px;
+                        text-align: center;
+                        vertical-align: top;
+                        display: inline-block;
+                        background-color: #fff;
+                        margin-bottom: 0 !important;
+
+                        &:nth-child(2) .card-icons--svg-card {
+                            margin-top: 3px;
+                        }
+
+                        &:last-child .card-icons--svg-card {
+                            margin-top: -3px;
+                        }
+
+                        .card-icons--svg-card {
+                            height: auto !important;
+                            max-width: 30px !important;
+                        }
+
+                        &:last-child {
+                            width: 100%;
+                            clear: both;
+                            color: #fff;
+                            margin-right: 0;
+                            margin-top: 20px;
+                            background: none;
+                        }
+                    }
+                }
+
+                &__item {
+                    &__link {
+                        font-size: 11px;
+                        color: #d4d4d4;
+                        text-transform: uppercase;
+
+                        &:hover {
+                            color: #fff;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            &__container {
+                width: 50%;
+                float: left;
+
+                &.is-12 {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__middle {
+        margin: 0;
+
+        address {
+            font-style: normal;
+        }
+    }
+
+    &__bottom {
+        padding: 0;
+        text-align: center;
+
+        &__list {
+            &__item {
+                margin-right: 10px;
+                display: inline-block;
+                vertical-align: middle;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

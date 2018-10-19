@@ -1,0 +1,64 @@
+.home {
+	.section {
+		&__page {
+			margin: 14px 0;
+		}
+
+		&__hero {
+			padding-top: 100px;
+		}
+
+		&__shelf {
+			ul {
+				li {
+    				margin: 0 1px !important;
+				}
+			}
+		}
+
+		&__title {
+			padding: 10px 10px 10px 0;
+			position: relative;
+			margin-bottom: 12px;
+
+			&__txt {
+				width: 70%;
+				color: #fff;
+				padding: 10px;
+				text-align: left;
+				font-weight: bold;
+				font-size: 1.4rem;
+				font-style: italic;
+				display: inline-block;
+				background-color: #000;
+				text-transform: uppercase;
+				font-family: 'Questrial', sans-serif;
+            }
+
+            .slick-prev {
+                svg{
+                    margin: 5px 1px 5px -4px
+                }
+            }
+
+            .slick-next {
+                svg{
+                    margin: 5px -4px 5px 1px
+                }
+            }
+		}
+
+		&__button {
+			position: absolute;
+		}
+	}
+
+	.slick-prev {
+		right: 48px;
+	}
+
+	.banner--full .slick-slide img {
+		width: 100%;
+		max-width: 1000%;
+	}
+}
