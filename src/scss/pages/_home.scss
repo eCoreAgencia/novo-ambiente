@@ -1,64 +1,568 @@
-.home {
-	.section {
-		&__page {
-			margin: 14px 0;
-		}
-
-		&__hero {
-			padding-top: 100px;
-		}
-
-		&__shelf {
-			ul {
-				li {
-    				margin: 0 1px !important;
-				}
-			}
-		}
-
-		&__title {
-			padding: 10px 10px 10px 0;
-			position: relative;
-			margin-bottom: 12px;
-
-			&__txt {
-				width: 70%;
-				color: #fff;
-				padding: 10px;
-				text-align: left;
-				font-weight: bold;
-				font-size: 1.4rem;
-				font-style: italic;
-				display: inline-block;
-				background-color: #000;
-				text-transform: uppercase;
-				font-family: 'Questrial', sans-serif;
+body.home .tpl-wrapper main .tpl-content section {
+    &#slideHome {
+      position: relative;
+      display: none;
+      .desktop {
+        display: block;
+      }
+      .mobile {
+        display: none;
+      }
+      .slick-slide img {
+        width: 100%;
+        height: auto;
+      }
+      ul.slick-dots {
+        display: none !important;
+      }
+      .slick-arrow {
+        background-image: url("/arquivos/setas-slide.png");
+        background-repeat: no-repeat;
+        width: 31px;
+        height: 60px;
+        position: absolute;
+        font-size: 0;
+        z-index: 999;
+        top: 50%;
+        margin-top: -30px;
+        cursor: pointer;
+        &::after {
+          display: none;
+        }
+        &.slick-prev {
+          left: 20px;
+        }
+        &.slick-next {
+          right: 20px;
+          background-position: right;
+        }
+      }
+    }
+    &#bannersQuadruplo {
+      margin-top: 40px;
+      clear: both;
+      overflow: hidden;
+      padding-top: 5px;
+      .wrapper {
+        overflow: hidden;
+        &.bottom {
+          border-top: 1px solid #cbcbca;
+          margin-top: 0px;
+          padding-top: 0px;
+        }
+        .prateleira {
+          width: 46%;
+          float: left;
+          margin-left: 2%;
+          margin-right: 2%;
+          h2 {
+            display: none;
+          }
+          ul li {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            border: 0 !important;
+            cursor: pointer;
+            margin-bottom: 15px;
+            margin-top: 0;
+            padding-bottom: 0;
+            padding-top: 0;
+            a {
+              display: block;
             }
-
-            .slick-prev {
-                svg{
-                    margin: 5px 1px 5px -4px
+            &:hover .shelf-wrapper .wrapperConteudo button {
+              background-color: #000;
+            }
+            .shelf-wrapper {
+              .wrapperConteudo {
+                width: 49%;
+                float: left;
+                display: flex;
+                align-items: center;
+                height: auto;
+                button {
+                  background-color: #e12528;
+                  border: 0;
+                  border-radius: 0;
+                  color: #fff;
+                  text-transform: uppercase;
+                  padding-left: 25px;
+                  padding-right: 25px;
+                  padding-top: 10px;
+                  padding-bottom: 10px;
+                  margin-top: 20px;
+                  letter-spacing: 0.5px;
                 }
-            }
-
-            .slick-next {
-                svg{
-                    margin: 5px -4px 5px 1px
+                .categoryName {
+                  color: #4f4f4f;
+                  font-size: 20px;
+                  font-weight: 500;
+                  line-height: 22px;
+                  margin-bottom: 10px;
                 }
+                .product-name {
+                  text-align: left;
+                  margin-bottom: 5px;
+                  font-weight: 300;
+                }
+                .brand-name {
+                  text-align: left;
+                }
+                .preco {
+                  text-align: left;
+                  margin-top: 20px;
+                  .valor-por {
+                    font-size: 0;
+                    strong {
+                      font-size: 18px;
+                    }
+                  }
+                  .valor-a-vista {
+                    text-align: left;
+                    p.boleto {
+                      text-align: left;
+                      padding-top: 6px;
+                      margin-top: 6px;
+                      span {
+                        text-align: left;
+                      }
+                    }
+                  }
+                }
+              }
+              .photo {
+                float: right;
+                width: 49%;
+              }
             }
-		}
+          }
+        }
+      }
+      h2 {
+        width: 100%;
+        text-align: center;
+        color: #010101;
+        text-transform: uppercase;
+        font-family: "Roboto Condensed", sans-serif;
+        margin-bottom: 10px;
+        display: block;
+        font-size: 28px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+      }
+    }
+    &#bannerRegua {
+      margin-top: 20px;
+      ul {
+        text-align: center;
+        border: 2px solid #ececed;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        li {
+          display: inline-block;
+          margin-left: 2%;
+          margin-right: 2%;
+          &:first-child {
+            margin-left: 0;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+          &:before {
+            content: "";
+            width: 64px;
+            height: 52px;
+            float: left;
+            background-repeat: no-repeat;
+            margin-right: 8px;
+          }
+          &.entrega:before {
+            background-image: url("/arquivos/icone-regua-entrega.png");
+          }
+          &.frete:before {
+            background-image: url("/arquivos/icone-regua-frete.png");
+          }
+          &.boleto:before {
+            background-image: url("/arquivos/icone-regua-boleto.png");
+          }
+          &.parcela:before {
+            background-image: url("/arquivos/icone-regua-parcela.png");
+          }
+          .wrapp {
+            float: left;
+            text-align: left;
+            strong {
+              clear: both;
+              display: block;
+              font-family: "Roboto Condensed", sans-serif;
+              text-transform: uppercase;
+              font-weight: 700;
+              letter-spacing: 0.5px;
+              color: #424143;
+              font-size: 13px;
+              text-align: left;
+              margin-top: 10px;
+              line-height: 16px;
+            }
+            span {
+              clear: both;
+              display: block;
+              color: #818181;
+              font-family: "Roboto Condensed", sans-serif;
+              font-weight: 300;
+              letter-spacing: 0.5px;
+              font-size: 13px;
+              text-align: left;
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+    }
+    &#bannerCentral {
+      margin-top: 40px;
+      .mobile {
+        display: none;
+      }
+      a {
+        display: block;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    &#wrapperPrateleira {
+      overflow: hidden;
+      clear: both;
+      margin-top: 40px;
+      position: relative;
+      min-height: 30px;
+      padding-bottom: 20px;
+      .tpl-center {
+        position: relative;
+        .contentProdutos {
+          margin-top: 30px;
+          &.ativo {
+            opacity: 1;
+            z-index: 999;
+          }
+        }
+      }
+      .prateleira {
+        margin-top: 0px;
+        padding-top: 0;
+        h2 {
+          text-align: center;
+          text-transform: uppercase;
+          font-family: inherit;
+          color: #010101;
+          font-family: "Roboto Condensed", sans-serif;
+          font-size: 24px;
+          font-weight: 400;
+          letter-spacing: 0.5px;
+        }
+        .slick-list {
+          width: calc(100% - 70px);
+          margin: 0 auto;
+          padding-top: 10px;
+          ul li {
+            margin-left: 0.2%;
+            margin-right: 0.2%;
+          }
+        }
+        .slick-arrow {
+          background-image: url("/arquivos/setas-prateleira.png");
+          background-repeat: no-repeat;
+          width: 33px;
+          height: 56px;
+          position: absolute;
+          font-size: 0;
+          z-index: 999;
+          top: 50%;
+          margin-top: -28px;
+          cursor: pointer;
+          &::after {
+            display: none;
+          }
+          &.slick-prev {
+            left: 0px;
+            left: inherit;
+            background-position: left;
+          }
+          &.slick-next {
+            right: 0px;
+            background-position: right;
+          }
+        }
+      }
+    }
+    &#marcas {
+      border-top: 1px solid #cbcbca;
+      margin-top: 40px;
+      padding-top: 40px;
+      display: none;
+      h2 {
+        width: 100%;
+        text-align: center;
+        color: #010101;
+        text-transform: uppercase;
+        font-family: "Roboto Condensed", sans-serif;
+        margin-bottom: 60px;
+        display: block;
+        font-size: 26px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+      }
+      .slick-track {
+        margin: 0 auto;
+      }
+      .slick-dots li {
+        margin-left: 5px;
+        margin-right: 5px;
+        &.slick-active button {
+          background-color: #e12528;
+        }
+        button {
+          font-size: 0;
+          display: block;
+          border: 0;
+          width: 10px;
+          height: 14px;
+          cursor: pointer;
+          background-color: #ececed;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      ul {
+        text-align: center;
+        li {
+          display: inline-block;
+          a {
+            display: block;
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
 
-		&__button {
-			position: absolute;
-		}
-	}
+  @media screen and (max-width: 1280px) {
+    body.home .tpl-wrapper main .tpl-content section#slideHome .tpl-center {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
 
-	.slick-prev {
-		right: 48px;
-	}
+  @media screen and (max-width: 1200px) {
+    body.home .tpl-wrapper main .tpl-content section#bannersQuadruplo .wrapper .prateleira ul li .shelf-wrapper .wrapperConteudo .preco .valor-a-vista {
+      display: none;
+    }
+  }
 
-	.banner--full .slick-slide img {
-		width: 100%;
-		max-width: 1000%;
-	}
-}
+  @media screen and (max-width: 480px) {
+    body.home .tpl-wrapper main .tpl-content section#bannersQuadruplo .wrapper .prateleira ul li .shelf-wrapper .wrapperConteudo .preco .valor-a-vista {
+      text-align: center !important;
+      display: block !important;
+      p.boleto {
+        text-align: center !important;
+        span {
+          text-align: center !important;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    body.home .tpl-wrapper main .tpl-content section#bannersQuadruplo .wrapper .prateleira ul li .shelf-wrapper {
+      .wrapperConteudo {
+        float: inherit;
+        width: 100%;
+        text-align: center;
+        height: auto !important;
+        a {
+          width: 100%;
+          display: block;
+          .product-name, .preco, .brand-name {
+            text-align: center;
+          }
+        }
+      }
+      .photo {
+        float: inherit;
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    body.home .tpl-wrapper main .tpl-content section#bannerCentral .tpl-center {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    body.home .tpl-wrapper main .tpl-content section#slideHome {
+      .desktop {
+        display: none;
+      }
+      .mobile {
+        display: block;
+        &:hover img {
+          -webkit-animation: none;
+          -moz-animation: none;
+          animation: none;
+        }
+        .slick-arrow {
+          display: none !important;
+        }
+        ul.slick-dots {
+          position: absolute;
+          bottom: 20px;
+          width: 100%;
+          text-align: center;
+          display: block !important;
+          li {
+            display: inline-block;
+            margin-left: 8px;
+            margin-right: 8px;
+            width: 10px;
+            height: 10px;
+            border: 0;
+            background-color: #fff;
+            cursor: pointer;
+            opacity: 0.5;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            button {
+              font-size: 0;
+              display: none;
+            }
+            &.slick-active {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 970px) {
+    body.home .tpl-wrapper main .tpl-content section#bannerCentral {
+      .desktop {
+        display: none;
+      }
+      .mobile {
+        display: block;
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    body.home .tpl-wrapper main .tpl-content section#wrapperPrateleira {
+      .tpl-center .contentProdutos {
+        margin-top: 0;
+      }
+      .prateleira {
+        .slick-arrow {
+          background-size: 30px;
+          width: 15px;
+          margin-top: -17.5px;
+        }
+        .slick-list {
+          width: calc(100% - 30px);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    body.home .tpl-wrapper main .tpl-content section {
+      &#bannersQuadruplo {
+        margin-top: 30px;
+        h2 {
+          font-size: 16px;
+          line-height: 22px;
+          margin-bottom: 20px;
+        }
+        .wrapper {
+          border: 0 !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          .prateleira {
+            width: 100%;
+            float: none;
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+      }
+      &#bannerRegua {
+        margin-top: 20px;
+        ul {
+          padding-top: 0;
+          padding-bottom: 0;
+          li {
+            width: max-content;
+            margin-right: 1.5%;
+            margin-left: 1.5%;
+            margin-top: 10px;
+            .wrapp {
+              strong, span {
+                font-size: 12px;
+              }
+            }
+            &:before {
+              background-size: 40px;
+              width: 40px;
+              height: 36px;
+              margin-right: 5px;
+              margin-top: 9px;
+            }
+          }
+        }
+      }
+      &#wrapperPrateleira .prateleira {
+        margin-top: 15px;
+        h2 {
+          font-size: 16px;
+        }
+      }
+      &#marcas {
+        margin-top: 20px;
+        padding-top: 20px;
+        h2 {
+          font-size: 16px;
+          line-height: 22px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    body.home .tpl-wrapper main .tpl-content section#instagram .tpl-center ul li {
+      width: 48%;
+      margin-left: 0%;
+      margin-right: 0%;
+      &:nth-child(2) {
+        margin-left: 0%;
+        margin-right: 0%;
+        float: right;
+      }
+      &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+        display: none;
+      }
+    }
+  }

@@ -12,3 +12,100 @@ body#busca-vazia-page{
         }
     }
 }
+
+body.busca-vazia main .tpl-content .tpl-center .wrapperProdutos .prateleira {
+    margin-top: 15px;
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      font-family: inherit;
+      color: #424143;
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+    .slick-list {
+      width: calc(100% - 70px);
+      margin: 0 auto;
+      padding-top: 10px;
+      ul li {
+        margin-left: 0.2%;
+        margin-right: 0.2%;
+      }
+    }
+    .slick-arrow {
+      background-image: url("/arquivos/setas-prateleira.png");
+      background-repeat: no-repeat;
+      width: 33px;
+      height: 56px;
+      position: absolute;
+      font-size: 0;
+      z-index: 999;
+      top: 50%;
+      margin-top: -28px;
+      cursor: pointer;
+      &::after {
+        display: none;
+      }
+      &.slick-prev {
+        left: 0px;
+        left: inherit;
+        background-position: left;
+      }
+      &.slick-next {
+        right: 0px;
+        background-position: right;
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    body.busca-vazia {
+      main .tpl-content .tpl-center .wrapperProdutos {
+        .prateleira h2 {
+          font-size: 18px !important;
+          text-align: left !important;
+        }
+        .wrapperNaoEncontrado {
+          .resultadoDaBusca span {
+            font-size: 13px !important;
+            line-height: 20px !important;
+          }
+          .oquefazer {
+            font-size: 10px !important;
+            letter-spacing: 0.2px !important;
+          }
+        }
+      }
+      .wrapperPrateleiraHome li {
+        width: 32.3%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    body.busca-vazia .wrapperPrateleiraHome .prateleira li {
+      min-height: 330px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    body.busca-vazia .wrapperPrateleiraHome .prateleira li {
+      width: 49%;
+      min-height: 390px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    body.busca-vazia .wrapperPrateleiraHome .prateleira li {
+      min-height: 345px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    body.busca-vazia .wrapperPrateleiraHome .prateleira li {
+      width: 100%;
+      min-height: auto;
+      margin-left: 0;
+    }
+  }
